@@ -129,6 +129,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://barakahsoft.com/wp-content/uploads/2025/12/gcs-logo-school-favicon-2.png">
+    <!-- Premium Bangla Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -150,8 +152,6 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -165,7 +165,123 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
 
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        /* Ensure buttons are same height */
+        .hero-buttons .btn {
+            max-width: 250px;
+            padding: 16px 32px;
+            font-size: 18px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 56px; /* Fixed height for alignment */
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-tagline {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+
+        /* Button base styles - ensure consistency */
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            line-height: 1.5;
+        }
+
+        .btn-primary {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #047857;
+        }
+
+        .btn-secondary:hover {
+            background: #f3f4f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
         * {
             margin: 0;
             padding: 0;
@@ -187,11 +303,32 @@
         }
 
         body {
-            font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+            font-family: 'Noto Serif Bengali', 'Hind Siliguri', 'SolaimanLipi', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-white);
-            overflow-x: hidden;
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+            background: #f9fafb;
+        }
+
+        /* Headings - More elegant serif */
+        h1, h2, h3, .hero-title, .section-title, .feature-title, .dept-name {
+            font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+            font-weight: 700;
+        }
+
+        /* Body text - Clean readable */
+        p, .feature-desc, .dept-desc, .form-label, .btn {
+            font-family: 'Hind Siliguri', 'Noto Serif Bengali', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Chairman message - Elegant serif */
+        .chairman-quote {
+            font-family: 'Noto Serif Bengali', serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 2;
         }
 
         /* Smooth Scroll */
@@ -348,7 +485,7 @@
 
         /* Hero Section */
         .hero {
-            background-color: #00000066 !important;
+            background-color: #00000090 !important;
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -1060,7 +1197,6 @@
             padding: 20px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="root"></div>
@@ -1102,12 +1238,10 @@
         const [formData, setFormData] = useState({
             parentName: '',
             phone: '',
-            altPhone: '',
             childName: '',
             childAge: '',
             grade: '',
             area: '',
-            departments: [],
             message: ''
         });
         const [formSubmitted, setFormSubmitted] = useState(false);
@@ -1131,16 +1265,6 @@
         const handleInputChange = (e) => {
             const { name, value } = e.target;
             setFormData(prev => ({ ...prev, [name]: value }));
-        };
-
-        const handleCheckboxChange = (e) => {
-            const { value, checked } = e.target;
-            setFormData(prev => ({
-                ...prev,
-                departments: checked
-                    ? [...prev.departments, value]
-                    : prev.departments.filter(d => d !== value)
-            }));
         };
 
         const handleSubmit = async (e) => {
@@ -1189,12 +1313,10 @@
                 setFormData({
                     parentName: '',
                     phone: '',
-                    altPhone: '',
                     childName: '',
                     childAge: '',
                     grade: '',
                     area: '',
-                    departments: [],
                     message: ''
                 });
 
@@ -1250,36 +1372,29 @@
                 {/* Main Content */}
                 <main className="main-content">
                     {/* Hero Section */}
-                    <section id="hero" className="hero">
-                        <div className="hero-logo"><img src="https://barakahsoft.com/wp-content/uploads/2025/12/gcs-logo-school-1.jpg" alt=""/></div>
-                        <h1 className="hero-title">{CONTENT.school.name}</h1>
-                        <p className="hero-subtitle">{CONTENT.school.nameEn}</p>
-
-                        <div className="badge">
-                            🌟 রাজশাহীতে প্রথম ও একমাত্র 🌟
-                        </div>
-
-                        <div className="trilingual-box">
-                            <div className="trilingual-title">তিনটি ভাষায় শিক্ষা প্রদান</div>
-                            <div className="languages">🗣️ আরবি • ইংরেজি • বাংলা</div>
-                            <div className="tagline">
-                                ইসলামিক শিক্ষা + আধুনিক বিজ্ঞানভিত্তিক জ্ঞান<br/>
-                                একসাথে এক প্রতিষ্ঠানে!
+                    <section className="hero">
+                        <div className="hero-content">
+                            <h1 className="hero-title">
+                                গ্লোবাল কুরআনিক স্কুল, রাজশাহী
+                            </h1>
+                            <p className="hero-subtitle" style={{fontSize: '20px', marginBottom: '16px', fontWeight: '600'}}>
+                                থ্রি ল্যাঙ্গুয়েজ-ফোর স্কিলস - রাজশাহীতে প্রথম ও একমাত্র
+                            </p>
+                            <p className="hero-tagline">
+                                আরবি, বাংলা ও ইংরেজিতে শোনা, বলা, পড়া ও লেখা - সব দক্ষতাই অর্জন করবে আপনার সন্তান
+                            </p>
+                            <p style={{fontSize: '16px', marginTop: '12px', fontStyle: 'italic'}}>
+                                প্রি-প্লে থেকে ২য় শ্রেণি পর্যন্ত | ২০২৬ সালের ভর্তি চলছে
+                            </p>
+                            <div className="hero-buttons">
+                                <a href="#admissions" className="btn btn-primary" onClick={(e) => {e.preventDefault(); scrollToSection('admissions');}}>
+                                    ভর্তি ফর্ম পূরণ করুন
+                                </a>
+                                <a href={`tel:+88${CONTENT.school.phone1}`} className="btn btn-secondary">
+                                    📞 কল করুন এখনই
+                                </a>
                             </div>
                         </div>
-
-                        <div className="cta-buttons">
-                            <a href="#admissions" className="btn btn-primary" onClick={(e) => {e.preventDefault(); scrollToSection('admissions');}}>
-                                📝 ভর্তি ফর্ম পূরণ করুন
-                            </a>
-                            <a href={`tel:+88${CONTENT.school.phone1}`} className="btn btn-secondary">
-                                📞 এখনই কল করুন
-                            </a>
-                        </div>
-
-                        <p style={{marginTop: '24px', fontSize: '15px'}}>
-                            সীমিত আসন | ভর্তি চলছে ২০২৬
-                        </p>
                     </section>
 
                     {/* Urgency Banner */}
@@ -1292,36 +1407,85 @@
                     <section className="section">
                         <h2 className="section-title">রাজশাহীতে এই প্রথম<br/>আপনার সন্তান পাবে</h2>
                         <div className="features-grid">
+
                             <div className="feature-card">
                                 <div className="feature-icon">🌍</div>
-                                <h3 className="feature-title">তিনটি ভাষায় কথা বলবে</h3>
-                                <p className="feature-desc">আরবি, ইংরেজি ও বাংলায় সমান দক্ষতা</p>
+                                <h3 className="feature-title">থ্রি ল্যাঙ্গুয়েজ-ফোর স্কিলস</h3>
+                                <p className="feature-desc">
+                                    <strong>আরবি, বাংলা ও ইংরেজি</strong> - তিনটি ভাষাতেই <strong>শোনা, বলা, পড়া ও লেখা</strong> শিখবে।
+                                    <br/><br/>
+                                    ✓ মাতৃভাষার মতো দক্ষতা অর্জন<br/>
+                                    ✓ প্রতিটি ভাষায় সাবলীলভাবে যোগাযোগ<br/>
+                                    ✓ কুরআনের ইংরেজি ও বাংলা অনুবাদ শিক্ষা<br/>
+                                    ✓ বিজ্ঞানসম্মত শিক্ষা পদ্ধতি
+                                </p>
                             </div>
+
                             <div className="feature-card">
                                 <div className="feature-icon">📿</div>
-                                <h3 className="feature-title">কুরআন হিফজ দ্রুত সময়ে</h3>
-                                <p className="feature-desc">বিশেষ পদ্ধতিতে হিফজ সম্পূর্ণ</p>
+                                <h3 className="feature-title">কুরআন হিফজ + আধুনিক শিক্ষা</h3>
+                                <p className="feature-desc">
+                                    হিফজুল কুরআনের সাথে সাথে আধুনিক বিজ্ঞান, গণিত ও প্রযুক্তি শিক্ষা।
+                                    <br/><br/>
+                                    ✓ দ্রুত হিফজ সম্পন্ন করার বিশেষ পদ্ধতি<br/>
+                                    ✓ তাজবীদসহ শুদ্ধ তিলাওয়াত<br/>
+                                    ✓ আরবি ভাষায় সাবলীল কথোপকথন<br/>
+                                    ✓ দ্বীন ও দুনিয়ার সমন্বয়
+                                </p>
                             </div>
+
                             <div className="feature-card">
-                                <div className="feature-icon">🔬</div>
-                                <h3 className="feature-title">আধুনিক শিক্ষা + দ্বীনি ইলম</h3>
-                                <p className="feature-desc">বিজ্ঞান, গণিত, কম্পিউটার সবই</p>
+                                <div className="feature-icon">🧠</div>
+                                <h3 className="feature-title">মস্তিষ্ক উন্নয়ন ও মেধা বৃদ্ধি</h3>
+                                <p className="feature-desc">
+                                    বিজ্ঞানসম্মত পদ্ধতিতে মস্তিষ্ক হবে তীক্ষ্ণ, স্মৃতিশক্তি বাড়বে।
+                                    <br/><br/>
+                                    ✓ উন্নত সমস্যা সমাধান দক্ষতা<br/>
+                                    ✓ সৃজনশীল চিন্তাভাবনা<br/>
+                                    ✓ গাণিতিক ও বৈজ্ঞানিক দক্ষতা<br/>
+                                    ✓ একাধিক কাজে মনোযোগ দেওয়ার ক্ষমতা
+                                </p>
                             </div>
+
                             <div className="feature-card">
                                 <div className="feature-icon">💎</div>
-                                <h3 className="feature-title">চরিত্রবান মুসলিম</h3>
-                                <p className="feature-desc">দীনদার শিক্ষক দ্বারা তরবিয়াত</p>
+                                <h3 className="feature-title">চরিত্র গঠন ও ইসলামিক তরবিয়াত</h3>
+                                <p className="feature-desc">
+                                    দীনদার শিক্ষক দ্বারা আখলাক, আদব ও ইসলামিক মূল্যবোধ শিক্ষা।
+                                    <br/><br/>
+                                    ✓ পাঁচ ওয়াক্ত নামাজ শিক্ষা<br/>
+                                    ✓ দৈনন্দিন দোয়া ও যিকির<br/>
+                                    ✓ ইসলামিক গল্প ও শিক্ষা<br/>
+                                    ✓ সৎ ও নৈতিক চরিত্র গঠন
+                                </p>
                             </div>
+
                             <div className="feature-card">
                                 <div className="feature-icon">👨‍👩‍👧</div>
                                 <h3 className="feature-title">নিরাপদ ও পরিচ্ছন্ন পরিবেশ</h3>
-                                <p className="feature-desc">ছোট শিশুদের জন্য বিশেষ যত্ন ও নিরাপত্তা</p>
+                                <p className="feature-desc">
+                                    ছোট শিশুদের জন্য বিশেষভাবে ডিজাইন করা নিরাপদ শিক্ষা পরিবেশ।
+                                    <br/><br/>
+                                    ✓ সিসি ক্যামেরা নিরাপত্তা ব্যবস্থা<br/>
+                                    ✓ পরিষ্কার-পরিচ্ছন্ন শ্রেণিকক্ষ<br/>
+                                    ✓ আধুনিক শিক্ষা উপকরণ<br/>
+                                    ✓ প্রশিক্ষিত ও যত্নশীল শিক্ষক
+                                </p>
                             </div>
+
                             <div className="feature-card">
                                 <div className="feature-icon">⏰</div>
                                 <h3 className="feature-title">সুবিধাজনক সময়সূচি</h3>
-                                <p className="feature-desc">কর্মজীবী বাবা-মায়ের জন্য উপযুক্ত ক্লাস টাইম</p>
+                                <p className="feature-desc">
+                                    কর্মজীবী বাবা-মায়ের জন্য উপযুক্ত ক্লাস টাইম ও অবস্থান।
+                                    <br/><br/>
+                                    ✓ সকাল ৮:৩০ - দুপুর ১:১৫ টা<br/>
+                                    ✓ শুক্রবার সাপ্তাহিক ছুটি<br/>
+                                    ✓ শহরের কেন্দ্রস্থলে অবস্থান<br/>
+                                    ✓ সহজে যাতায়াত সুবিধা
+                                </p>
                             </div>
+
                         </div>
                     </section>
 
@@ -1329,17 +1493,23 @@
                     <section id="about" className="section section-alt">
                         <h2 className="section-title">চেয়ারম্যানের বাণী</h2>
                         <div className="chairman-section">
-                            <div className="chairman-photo"><img src="https://barakahsoft.com/wp-content/uploads/2025/12/gcs-logo-school-founder-1.jpg" alt=""/></div>
-                            <div className="chairman-quote">
-                                "আসসালামু আলাইকুম। আমরা চাই আপনার সন্তান দ্বীন ও দুনিয়া উভয়ে সফল হোক।
-                                <br/><br/>
-                                আল্লাহর কিতাব মুখস্থ করবে, সাথে আধুনিক শিক্ষায় এগিয়ে থাকবে। তিনটি ভাষায় কথা বলবে - আরবি, ইংরেজি ও বাংলা।
-                                <br/><br/>
-                                আমরা শুধু স্কুল নই, আমরা আপনার সন্তানের দ্বিতীয় ঘর। এখানে প্রতিটি শিশু আমাদের দায়িত্ব।
-                                <br/><br/>
-                                আল্লাহ তায়ালা আমাদের সবাইকে নেক সন্তান দান করুন।"
+                            <div className="chairman-photo">
+                                <img src="https://barakahsoft.com/wp-content/uploads/2025/12/gcs-logo-school-founder-1.jpg" alt=""/>
                             </div>
-                            <div className="chairman-name">- {CONTENT.school.chairman}</div>
+                            <div className="chairman-quote">
+                                "আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহি ওয়া বারাকাতুহু।
+                                <br/><br/>
+                                আল্লাহর রহমতে আমরা রাজশাহীতে প্রথমবারের মতো এমন একটি শিক্ষা প্রতিষ্ঠান প্রতিষ্ঠা করেছি যেখানে আপনার সন্তান দ্বীন ও দুনিয়া - উভয় ক্ষেত্রেই সফল হবে, ইন শা আল্লাহ।
+                                <br/><br/>
+                                আমাদের লক্ষ্য হলো - আপনার সন্তান যেন আল্লাহর কিতাব কুরআন মুখস্থ করার পাশাপাশি আধুনিক শিক্ষায়ও সমানভাবে দক্ষ হয়। আরবি, ইংরেজি ও বাংলা - তিনটি ভাষাতেই যেন মাতৃভাষার মতো কথা বলতে, পড়তে, লিখতে ও বুঝতে পারে।
+                                <br/><br/>
+                                গ্লোবাল কুরআনিক স্কুল শুধুমাত্র একটি শিক্ষা প্রতিষ্ঠানই নয়, এটি আপনার সন্তানের দ্বিতীয় ঘর। এখানে প্রতিটি শিশু আমাদের আমানত এবং আমরা তাদের শারীরিক, মানসিক, আধ্যাত্মিক ও বুদ্ধিবৃত্তিক - সকল দিক থেকে উন্নত করার জন্য প্রতিশ্রুতিবদ্ধ।
+                                <br/><br/>
+                                আমরা বিশ্বাস করি, সঠিক শিক্ষা ও তরবিয়াতের মাধ্যমে আপনার সন্তান হবে আল্লাহর নেক বান্দা, দেশের সুনাগরিক এবং বিশ্বমানের মানুষ।
+                                <br/><br/>
+                                আল্লাহ তায়ালা আমাদের সবাইকে নেক সন্তান দান করুন এবং তাদেরকে দ্বীন ও দুনিয়ার সফলতা দান করুন। আমীন।"
+                            </div>
+                            <div className="chairman-name">- অধ্যাপক মাওলানা আব্দুল্লাহ আল মাহমুদ</div>
                             <div className="chairman-title">চেয়ারম্যান, {CONTENT.school.name}</div>
                         </div>
                     </section>
@@ -1352,13 +1522,15 @@
                             <div className="dept-icon">📖</div>
                             <h3 className="dept-name">নুরানী ও মক্তব বিভাগ</h3>
                             <p className="dept-desc">
-                                ছোটবেলা থেকেই শুদ্ধভাবে কুরআন তিলাওয়াত শিখুন। আরবি হরফ চেনা থেকে শুরু করে
-                                সহীহ উচ্চারণে কুরআন পড়া পর্যন্ত ধাপে ধাপে শেখানো হয়।
+                                ছোটবেলা থেকেই শুদ্ধভাবে কুরআন তিলাওয়াত শিখুন। নুরানী পদ্ধতিতে দ্রুত ও কার্যকর শিক্ষা।
                                 <br/><br/>
-                                <strong>✓</strong> নুরানী পদ্ধতিতে দ্রুত শিক্ষা<br/>
-                                <strong>✓</strong> প্রতিটি হরফের শুদ্ধ উচ্চারণ<br/>
-                                <strong>✓</strong> মাখরাজ ও সিফাত সহ শিক্ষা<br/>
-                                <strong>✓</strong> অভিজ্ঞ কারী শিক্ষক দ্বারা পাঠদান
+                                <strong>যা শেখানো হয়:</strong><br/>
+                                ✓ অত্যাধুনিক ও সঠিক নুরানী পদ্ধতি<br/>
+                                ✓ শুদ্ধ সম্মত পবিত্র কুরআনুল কারীম হিফয সম্পূর্ণ করণ<br/>
+                                ✓ বাংলা পাশাপাশি ইংরেজী ও আরবী ভাষার পাঠদান<br/>
+                                ✓ গণিতের উপর বিশেষ গুরুত্বরোপ<br/>
+                                ✓ আরবি ও ইংরেজিতে পার্শ্পারিক কথোপকথন ও বক্তৃতা প্রদানের নিয়মিত সুযোগ<br/>
+                                ✓ মেধাবী, বিজ্ঞ ও প্রশিক্ষণপ্রাপ্ত দীনদার শিক্ষক মন্ডলী দ্বারা পাঠদান
                             </p>
                         </div>
 
@@ -1367,29 +1539,37 @@
                             <h3 className="dept-name">নাযেরা বিভাগ</h3>
                             <p className="dept-desc">
                                 তাজবীদের নিয়মসহ সহীহ ও সুন্দরভাবে কুরআন তিলাওয়াত শিখুন।
-                                শুধু পড়া নয়, কুরআনের সাথে সম্পর্ক তৈরি করুন।
                                 <br/><br/>
-                                <strong>✓</strong> তাজবীদের সকল নিয়মকানুন<br/>
-                                <strong>✓</strong> সুরা ও আয়াত শুদ্ধভাবে পড়া<br/>
-                                <strong>✓</strong> ছোট ছোট সুরা মুখস্থকরণ<br/>
-                                <strong>✓</strong> নামাজের জন্য প্রয়োজনীয় সুরা শিক্ষা
+                                <strong>যা শেখানো হয়:</strong><br/>
+                                ✓ তাজবীদের সকল নিয়ম-কানুন<br/>
+                                ✓ সুরা ও আয়াত শুদ্ধভাবে পড়া<br/>
+                                ✓ ছোট ছোট সুরা মুখস্থকরণ<br/>
+                                ✓ নামাজের জন্য প্রয়োজনীয় সুরা ও দোয়া<br/>
+                                ✓ কুরআনের সাথে গভীর সম্পর্ক তৈরি
                             </p>
                         </div>
 
                         <div className="department-card">
                             <div className="dept-icon">👶</div>
-                            <h3 className="dept-name">ডে-কেয়ার (প্রি-কেজি থেকে ২য় শ্রেণি)</h3>
+                            <h3 className="dept-name">ডে-কেয়ার (প্রি-প্লে থেকে ২য় শ্রেণি)</h3>
                             <p className="dept-desc">
-                                আপনার সন্তানের ভিত্তি মজবুত করুন! আধুনিক শিক্ষার সাথে সাথে
-                                ইসলামিক মূল্যবোধ ও আদব-আখলাক শেখানো হয়।
+                                আপনার সন্তানের ভিত্তি মজবুত করুন! থ্রি ল্যাঙ্গুয়েজ-ফোর স্কিলস পদ্ধতিতে শিক্ষা।
                                 <br/><br/>
-                                <strong>শিক্ষা বিষয়:</strong><br/>
-                                <strong>✓</strong> বাংলা, ইংরেজি ও গণিত (মৌলিক শিক্ষা)<br/>
-                                <strong>✓</strong> আরবি ভাষা (কথা বলা + পড়া + লেখা)<br/>
-                                <strong>✓</strong> কুরআন তিলাওয়াত ও মুখস্থকরণ<br/>
-                                <strong>✓</strong> নামাজ, দোয়া ও ইসলামিক গল্প<br/>
-                                <strong>✓</strong> হাতের লেখা উন্নয়ন<br/>
-                                <strong>✓</strong> সৃজনশীল কার্যক্রম ও খেলাধুলা
+                                <strong>শ্রেণি সমূহ:</strong><br/>
+                                • প্রি-প্লে (৩-৪ বছর) - হরফ পরিচিতি<br/>
+                                • প্লে (৪-৫ বছর) - হরফ পরিচিতি, হরফকত ও যুক্তাক্ষর পরিচিতি<br/>
+                                • নার্সারি (৫-৬ বছর) - কায়েদা বিভাগ (সময়কাল ৬ মাস)<br/>
+                                • ১ম শ্রেণী (৬-৭ বছর) - নাযেরা সম্পূর্ণ (সময়কাল ১২ মাস)<br/>
+                                • ২য় শ্রেণী (৭-৮ বছর) - ৫ পারা হিফজ<br/>
+                                <br/>
+                                <strong>যা শেখানো হয়:</strong><br/>
+                                ✓ বাংলা, ইংরেজি ও গণিত (মৌলিক শিক্ষা)<br/>
+                                ✓ আরবি ভাষা (কথা বলা + পড়া + লেখা)<br/>
+                                ✓ কুরআন তিলাওয়াত ও মুখস্থকরণ<br/>
+                                ✓ নামাজ, দোয়া ও ইসলামিক গল্প<br/>
+                                ✓ হাতের লেখা উন্নয়ন<br/>
+                                ✓ সৃজনশীল কার্যক্রম ও খেলাধুলা<br/>
+                                ✓ কম্পিউটার প্রশিক্ষণ
                             </p>
                         </div>
 
@@ -1397,15 +1577,21 @@
                             <div className="dept-icon">📿</div>
                             <h3 className="dept-name">হিফজুল কুরআন বিভাগ (ছেলে ও মেয়ে আলাদা)</h3>
                             <p className="dept-desc">
-                                আপনার সন্তানকে হাফেজ বানান! বিশেষ হিফজ পদ্ধতিতে দ্রুত ও শুদ্ধভাবে
-                                পবিত্র কুরআন মুখস্থ করানো হয়। ছেলে ও মেয়েদের সম্পূর্ণ আলাদা ক্লাস ও শিক্ষক।
+                                আপনার সন্তানকে হাফেজ বানান! বিশেষ হিফজ পদ্ধতিতে দ্রুত ও শুদ্ধভাবে পবিত্র কুরআন মুখস্থ।
                                 <br/><br/>
-                                <strong>✓</strong> বিশেষ হিফজ কৌশল (দ্রুত মুখস্থ হয়)<br/>
-                                <strong>✓</strong> প্রতিদিন সবক, দোর ও আমুখতা<br/>
-                                <strong>✓</strong> নিয়মিত পুনঃঅনুশীলন ও পরীক্ষা<br/>
-                                <strong>✓</strong> তাজবীদসহ শুদ্ধ তিলাওয়াত<br/>
-                                <strong>✓</strong> ছেলে-মেয়ে সম্পূর্ণ আলাদা ব্যবস্থা<br/>
-                                <strong>✓</strong> অভিজ্ঞ হাফেজ শিক্ষক
+                                <strong>বয়স অনুযায়ী পরিকল্পনা:</strong><br/>
+                                • ৩য় শ্রেণী (৮-৯ বছর) - ১০ পারা হিফজ (৫+১০=১৫ পারা)<br/>
+                                • ৪র্থ শ্রেণী (৯-১০ বছর) - ২৫ পারা হিফজ (১৫+১০=২৫ পারা)<br/>
+                                • ৫ম শ্রেণী (১০-১১ বছর) - ৫ পারা ও মাস (৫+২৫=৩০ পারা সম্পূর্ণ)<br/>
+                                <br/>
+                                <strong>বিশেষত্ব:</strong><br/>
+                                ✓ দ্রুত হিফজ সম্পন্নের বিশেষ কৌশল<br/>
+                                ✓ প্রতিদিন সবক, দোর ও আমুখতা<br/>
+                                ✓ নিয়মিত পুনঃঅনুশীলন ও পরীক্ষা<br/>
+                                ✓ তাজবীদসহ শুদ্ধ তিলাওয়াত<br/>
+                                ✓ ছেলে-মেয়ে সম্পূর্ণ আলাদা ব্যবস্থা<br/>
+                                ✓ অভিজ্ঞ হাফেজ শিক্ষক<br/>
+                                ✓ দোয়া ও কুরআনের অনুবাদ শিক্ষা
                             </p>
                         </div>
 
@@ -1414,14 +1600,125 @@
                             <h3 className="dept-name">কম্পিউটার প্রশিক্ষণ</h3>
                             <p className="dept-desc">
                                 ভবিষ্যৎ প্রযুক্তিনির্ভর। তাই ছোটবেলা থেকেই কম্পিউটার শিক্ষা শুরু করুন।
-                                আধুনিক যুগে এগিয়ে থাকার জন্য প্রযুক্তি জ্ঞান অপরিহার্য।
                                 <br/><br/>
-                                <strong>✓</strong> বেসিক কম্পিউটার পরিচিতি<br/>
-                                <strong>✓</strong> মাউস ও কীবোর্ড ব্যবহার<br/>
-                                <strong>✓</strong> ড্রয়িং ও গেমসের মাধ্যমে শিক্ষা<br/>
-                                <strong>✓</strong> শিশুবান্ধব সফটওয়্যার<br/>
-                                <strong>✓</strong> বয়স উপযোগী প্রশিক্ষণ
+                                <strong>যা শেখানো হয়:</strong><br/>
+                                ✓ বেসিক কম্পিউটার পরিচিতি<br/>
+                                ✓ মাউস ও কীবোর্ড ব্যবহার<br/>
+                                ✓ ড্রয়িং ও গেমসের মাধ্যমে শিক্ষা<br/>
+                                ✓ শিশুবান্ধব সফটওয়্যার<br/>
+                                ✓ বয়স উপযোগী প্রশিক্ষণ
                             </p>
+                        </div>
+                    </section>
+
+                    <section className="section section-alt">
+                        <h2 className="section-title">ভর্তির সুবিধা</h2>
+                        <div style={{maxWidth: '900px', margin: '0 auto'}}>
+
+                            <div className="info-card" style={{background: 'white', padding: '24px', borderRadius: '12px', marginBottom: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
+                                <h3 style={{fontSize: '20px', fontWeight: '700', marginBottom: '16px', color: '#047857'}}>📋 ভর্তি প্রক্রিয়া</h3>
+                                <p style={{lineHeight: '1.8'}}>
+                                    ✓ অফিস থেকে ২০০ টাকা দিয়ে ১টি ভর্তি ফরম সংগ্রহ করতে হবে<br/>
+                                    ✓ প্রতিষ্ঠান কর্তৃক নির্ধারিত ফরমে সকল তথ্য প্রদান করতে হবে<br/>
+                                    ✓ ফরমের সাথে শিক্ষার্থীর ২ কপি পাসপোর্ট সাইজের ছবি জমা দিতে হবে<br/>
+                                    ✓ ছাত্র-ছাত্রীর জন্য নির্ধারণ এর ফটোকপি জমা দিতে হবে<br/>
+                                    ✓ আবেদনকারের জাতীয় পরিচয়পত্রের ফটোকপি ও ২ কপি পাসপোর্ট সাইজের ছবি জমা দিতে হবে<br/>
+                                    ✓ প্রতিষ্ঠানের নির্ধারিত ফি জমা দেওয়ার মাধ্যমে ভর্তি প্রক্রিয়া সম্পন্ন হবে<br/>
+                                    ✓ ছাত্র-ছাত্রীকে যিনি স্কুল থেকে নিয়ে যাবেন তার ছবিসহ পর্ণ তথ্য জমা দিতে হবে
+                                </p>
+                            </div>
+
+                            <div className="info-card" style={{background: 'white', padding: '24px', borderRadius: '12px', marginBottom: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
+                                <h3 style={{fontSize: '20px', fontWeight: '700', marginBottom: '16px', color: '#047857'}}>💰 ভর্তি ফি ও সেশন চার্জ</h3>
+                                <div style={{overflowX: 'auto'}}>
+                                    <table style={{width: '100%', borderCollapse: 'collapse'}}>
+                                        <thead>
+                                        <tr style={{background: '#f3f4f6'}}>
+                                            <th style={{padding: '12px', textAlign: 'left', border: '1px solid #e5e7eb'}}>শ্রেণী</th>
+                                            <th style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>ভর্তি ফি</th>
+                                            <th style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>সেশন ফি</th>
+                                            <th style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>মোট</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>প্রি-প্লে</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>২,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>৩,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৫,০০০/-</td>
+                                        </tr>
+                                        <tr style={{background: '#f9fafb'}}>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>প্লে</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>২,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>৪,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৬,০০০/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>নার্সারি</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>২,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>৪,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৬,০০০/-</td>
+                                        </tr>
+                                        <tr style={{background: '#f9fafb'}}>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>১ম শ্রেণী</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>২,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>৫,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৭,০০০/-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>২য় শ্রেণী</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>২,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>৫,০০০/-</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৭,০০০/-</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div className="info-card" style={{background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
+                                <h3 style={{fontSize: '20px', fontWeight: '700', marginBottom: '16px', color: '#047857'}}>💵 মাসিক বেতন</h3>
+                                <div style={{overflowX: 'auto'}}>
+                                    <table style={{width: '100%', borderCollapse: 'collapse'}}>
+                                        <thead>
+                                        <tr style={{background: '#f3f4f6'}}>
+                                            <th style={{padding: '12px', textAlign: 'left', border: '1px solid #e5e7eb'}}>শ্রেণী</th>
+                                            <th style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb'}}>মাসিক বেতন</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>প্রি-প্লে</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>১,২০০/- টাকা মাত্র</td>
+                                        </tr>
+                                        <tr style={{background: '#f9fafb'}}>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>প্লে</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>১,৫০০/- টাকা মাত্র</td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>নার্সারি</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>১,৮০০/- টাকা মাত্র</td>
+                                        </tr>
+                                        <tr style={{background: '#f9fafb'}}>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>১ম শ্রেণী</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>২,২০০/- ১ম শিফট | ৮০০/- ২য় শিফট</td>
+                                        </tr>
+                                        <tr>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>২য় শ্রেণী</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>২,৫০০/- ১ম শিফট | ১,০০০/- ২য় শিফট</td>
+                                        </tr>
+                                        <tr style={{background: '#f9fafb'}}>
+                                            <td style={{padding: '12px', border: '1px solid #e5e7eb'}}>১ম, ২য় শ্রেণী ডে কেয়ার</td>
+                                            <td style={{padding: '12px', textAlign: 'center', border: '1px solid #e5e7eb', fontWeight: '600'}}>৪,৫০০/- সকাল ৬টা - রাত ৯.১৫ পর্যন্ত</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p style={{marginTop: '16px', fontSize: '14px', color: '#6b7280', fontStyle: 'italic'}}>
+                                    * সকালের নাস্তা ও দুপুরের খাবার নিজ নিজ দায়িত্বে
+                                </p>
+                            </div>
+
                         </div>
                     </section>
 
@@ -1542,18 +1839,6 @@
                             </div>
 
                             <div className="form-group">
-                                <label className="form-label">বিকল্প নম্বর (যদি থাকে)</label>
-                                <input
-                                    type="tel"
-                                    className="form-input"
-                                    name="altPhone"
-                                    value={formData.altPhone}
-                                    onChange={handleInputChange}
-                                    placeholder="01XXXXXXXXX"
-                                />
-                            </div>
-
-                            <div className="form-group">
                                 <label className="form-label">সন্তানের নাম <span className="required">*</span></label>
                                 <input
                                     type="text"
@@ -1588,11 +1873,11 @@
                                     required
                                 >
                                     <option value="">নির্বাচন করুন</option>
-                                    <option value="প্রি-কেজি">প্রি-কেজি</option>
-                                    <option value="নার্সারি">নার্সারি</option>
-                                    <option value="KG">KG</option>
-                                    <option value="১ম শ্রেণি">১ম শ্রেণি</option>
-                                    <option value="২য় শ্রেণি">২য় শ্রেণি</option>
+                                    <option value="প্রি-প্লে">প্রি-প্লে (৩-৪ বছর)</option>
+                                    <option value="প্লে">প্লে (৪-৫ বছর)</option>
+                                    <option value="নার্সারি">নার্সারি (৫-৬ বছর)</option>
+                                    <option value="১ম শ্রেণি">১ম শ্রেণি (৬-৭ বছর)</option>
+                                    <option value="২য় শ্রেণি">২য় শ্রেণি (৭-৮ বছর)</option>
                                 </select>
                             </div>
 
@@ -1606,44 +1891,6 @@
                                     onChange={handleInputChange}
                                     required
                                 />
-                            </div>
-
-                            <div className="form-group">
-                                <label className="form-label">কোন বিভাগে আগ্রহী? (একাধিক বেছে নিন)</label>
-                                <div className="checkbox-group">
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            value="নুরানী/মক্তব"
-                                            onChange={handleCheckboxChange}
-                                        />
-                                        নুরানী/মক্তব
-                                    </label>
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            value="নাযেরা"
-                                            onChange={handleCheckboxChange}
-                                        />
-                                        নাযেরা
-                                    </label>
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            value="ডে-কেয়ার"
-                                            onChange={handleCheckboxChange}
-                                        />
-                                        ডে-কেয়ার
-                                    </label>
-                                    <label className="checkbox-label">
-                                        <input
-                                            type="checkbox"
-                                            value="হিফজুল কুরআন"
-                                            onChange={handleCheckboxChange}
-                                        />
-                                        হিফজুল কুরআন
-                                    </label>
-                                </div>
                             </div>
 
                             <div className="form-group">
