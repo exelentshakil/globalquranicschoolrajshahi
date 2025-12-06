@@ -127,6 +127,24 @@
         }
     </script>
 
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "uhacw8y7fk");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8246KGTYT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y8246KGTYT');
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://barakahsoft.com/wp-content/uploads/2025/12/gcs-logo-school-favicon-2.png">
     <!-- Premium Bangla Fonts -->
@@ -1308,6 +1326,21 @@
                     confirmButtonText: 'ঠিক আছে',
                     confirmButtonColor: '#047857'
                 });
+
+
+                // Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'Admission',
+                        'event_label': formData.grade,
+                        'value': 1
+                    });
+                }
+
+                // MS Clarity
+                if (typeof clarity !== 'undefined') {
+                    clarity('set', 'lead_submitted', 'true');
+                }
 
                 // Reset form
                 setFormData({
